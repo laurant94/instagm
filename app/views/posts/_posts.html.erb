@@ -18,9 +18,12 @@
             <a href="<%= to_favorite_post_path(post.id) %>"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a>
           <% end %>
         </div>
-        <%if post.is_author?(current_user.id)%>
-          <div class="card-footer">
-            <div class="row">
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-sm">
+              <a href="<%= post_path(id: post.id) %>" class="btn-link">Lire...</a>
+            </div>
+            <%if post.is_author?(current_user.id)%>
               <div class="col-sm">
                 <a href="<%= edit_post_path(id: post.id) %>" class="btn-link">Editer</a>
               </div>
@@ -30,9 +33,9 @@
                 data-method="DELETE"
                 class="btn-link text-danger">Supprimer</a>
               </div>
-            </div>
+            <%end%>
           </div>
-        <%end%>
+        </div>
       </div>
     </div>
   <%end%>
