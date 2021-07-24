@@ -7,7 +7,7 @@ class RegisterMailer < ApplicationMailer
   def post_confirm(user, post)
     @user = user
     @post = post
-    mail(to: user.email, subject: "#{Rails.application.config.site[:name]}: Confirmation de publication")
+    mail(to: @user.email, subject: "#{Rails.application.config.site[:name]}: Confirmation de publication")
   end
 
 end

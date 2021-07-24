@@ -1,0 +1,9 @@
+<div class="container">
+  <%= content_tag('p', "Bonjour #{@user.username}", class: 'h2 text-center') %>
+  <p class="text-center">
+    Votre post a bien été publié. <br>
+    Vous pouez le retrouvé à l'adresse  <br>
+    Si vous voulez le visiter, <a href="<%= post_url(@post.id) %>">cliquez ici</a> 
+    Merci de votre confiance
+  </p>
+</div>

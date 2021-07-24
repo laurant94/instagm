@@ -11,6 +11,11 @@ module Facebook
       name: "Instagm"
     }
 
+    config.i18n.default_locale = :fr
+
+    config.time_zone = 'Africa/Porto-Novo'
+    config.active_record.default_timezone = :local
+
     config.generators do |g|
       g.assets false
       g.helper false

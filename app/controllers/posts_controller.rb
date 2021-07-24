@@ -19,7 +19,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    puts "\n\n\n\n\n\n\n #{params}"
     @post = Post.new(get_params)
     @post.user_id = current_user.id
     if(@post.valid?)

@@ -18,15 +18,15 @@
             <%end%>
 
             <%= form_for :user, url: login_path, html: { multipart: true }  do |f| %>
-              <div class="form-group">
+              <div class="mb-3">
                 <%= f.text_field :username, class: "form-control", placeholder: "Nom d'utilisateur" %>
               </div>
-              <div class="form-group">
+              <div class="mb-3">
                 <%= f.password_field :password, class: 'form-control' %>
               </div>
-              <div class="form-group text-center">
-                <%= f.submit 'Connexion', class:"btn btn-primary btn-lg btn-block", disable_with: 'Connecting...' %>
-                <a href="#">Mot de passe oublié</a> |
+              <div class="d-grid gap-2 text-center">
+                <%= f.submit 'Connexion', class:"btn btn-primary", disable_with: 'Connecting...' %>
+                <a href="#">Mot de passe oublié</a> 
                 <a href=" <%=register_path%> ">S'inscrire</a>
               </div>
             <% end %>

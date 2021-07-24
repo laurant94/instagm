@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    models:
+      user: 'Utilisateur'
+    attributes:
+      user:
+        username: "Nom d'utilisateur"
+        password: "Mot de passe"
+  errors:
+    format: '%{attribute} %{message}'
+    messages:
+      blank: " vide"
+      invalid: "n'est pas valide"
+      too_short: " trop court"

@@ -1,0 +1,33 @@
+
+
+@import "bootstrap/bootstrap.scss";
+
+$avatar_size: 10rem!default;
+
+.vertical-center{
+  margin-top: 40vh;
+  transform: translateY(-50%);
+}
+
+.card{
+  z-index: 50;
+  box-shadow: 2px 2px 2px 2px rgba($color: #000000, $alpha: 0.5) ;
+  background-color: #fff!important;
+  border: 0px;
+}
+
+.dropdown-menu {
+  position: absolute; 
+  inset: 0px auto auto 0px; 
+  margin: 0px; transform: 
+  translate(-111px, 34px);
+}
+
+.container, .container-sm, .container-md{
+  margin-top: 30px;
+}
+
+.img-larg{
+  height: 20rem !important;
+  width: 100%;
+}

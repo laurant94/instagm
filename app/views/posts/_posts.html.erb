@@ -1,7 +1,7 @@
 <div class="row">
   <%posts.each do |post|%>
     <div class="col-md-12">
-      <div class="card mb-4 shadow-sm">
+      <div class="card mb-4">
         <div class="card-header">
           <%= content_tag('p',"Par: #{post.user.username==current_user.username ? 'Vous' : post.user.username}", class:'text-left') if post.user && post.user.username %>
         </div>
@@ -17,7 +17,6 @@
           <% else %>
             <a href="<%= to_favorite_post_path(post.id) %>"><i class="fa fa-heart-o fa-2x" aria-hidden="true"></i></a>
           <% end %>
-          
         </div>
         <%if post.is_author?(current_user.id)%>
           <div class="card-footer">
