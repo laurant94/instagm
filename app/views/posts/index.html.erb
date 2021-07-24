@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row text-right">
+    <div class="col-md">
+      <a href="<%= new_post_path%>" class="btn btn-success">Ajouter une publication</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+      <p class="text-center h4">Mes publications</p>
+    </div>
+  </div>
+  <%= render 'posts', {posts: @posts} %>
+</div>
